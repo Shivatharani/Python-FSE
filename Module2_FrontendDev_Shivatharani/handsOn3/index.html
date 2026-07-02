@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - JavaScript DOM</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Student Portal</h1>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <h2>Welcome to the Student Portal</h2>
+
+            <p>Search, sort and explore your enrolled courses.</p>
+
+        </section>
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="search-courses"
+                placeholder="Search courses..."
+            >
+
+            <button id="sort-btn">
+                Sort by Credits
+            </button>
+
+        </section>
+
+        <!-- Empty Grid -->
+        <div class="course-grid"></div>
+
+        <p id="total-credits"></p>
+
+        <div id="selected-course"></div>
+
+    </main>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>

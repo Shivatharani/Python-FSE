@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal | Hands-On 4</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="container">
+
+            <h1>🎓 Student Portal</h1>
+
+            <p>
+                Async JavaScript • Fetch API • Axios Integration
+            </p>
+
+        </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <h2>Welcome Back, Student 👋</h2>
+
+            <p>
+                Manage your enrolled courses and receive the latest academic updates.
+            </p>
+
+        </section>
+
+        <!-- ================= COURSES ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>📚 My Courses</h2>
+
+            </div>
+
+            <div id="loading-courses" class="loading">
+
+                Loading courses...
+
+            </div>
+
+            <div class="course-grid">
+
+                <!-- Rendered from JavaScript -->
+
+            </div>
+
+            <div id="total-credits" class="credits-box">
+
+            </div>
+
+        </section>
+
+        <!-- ================= PROMISE.ALL ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>👨‍🎓 Students (Promise.all)</h2>
+
+            </div>
+
+            <div id="users" class="user-grid">
+
+            </div>
+
+        </section>
+
+        <!-- ================= FETCH API ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>🔔 Latest Notifications</h2>
+
+            </div>
+
+            <div id="spinner" class="loading">
+
+                Loading notifications...
+
+            </div>
+
+            <div id="notification-list" class="notification-grid">
+
+            </div>
+
+            <div id="error-message" class="error-box">
+
+            </div>
+
+            <button id="retry-btn">
+
+                Retry
+
+            </button>
+
+        </section>
+
+        <!-- ================= AXIOS ================= -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>📄 User 1 Posts (Axios)</h2>
+
+            </div>
+
+            <div id="axios-posts" class="notification-grid">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Student Portal | Digital Nurture 5.0
+
+        </p>
+
+    </footer>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>

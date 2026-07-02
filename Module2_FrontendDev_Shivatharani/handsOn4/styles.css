@@ -1,0 +1,381 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f7fb;
+
+    color:#333;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+}
+
+header h1{
+
+    font-size:38px;
+
+}
+
+header p{
+
+    margin-top:10px;
+
+    opacity:.9;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    background:white;
+
+    margin:30px 0;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+}
+
+.hero h2{
+
+    color:#1e3c72;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================
+   SECTION
+========================== */
+
+.section{
+
+    margin-bottom:40px;
+
+}
+
+.section-title{
+
+    margin-bottom:20px;
+
+    border-left:6px solid royalblue;
+
+    padding-left:15px;
+
+}
+
+/* ==========================
+   COURSE GRID
+========================== */
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+
+}
+
+/* ==========================
+   COURSE CARD
+========================== */
+
+.course-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.course-card h3{
+
+    color:#1e3c72;
+
+    margin-bottom:15px;
+
+}
+
+.course-card p{
+
+    margin:8px 0;
+
+}
+
+.course-card span{
+
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:6px 12px;
+
+    background:#eaf2ff;
+
+    color:#1e3c72;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   TOTAL CREDIT
+========================== */
+
+.credits-box{
+
+    margin-top:25px;
+
+    background:#1e3c72;
+
+    color:white;
+
+    padding:15px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   USER GRID
+========================== */
+
+.user-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.user-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+
+    text-align:center;
+
+}
+
+.user-card h3{
+
+    color:royalblue;
+
+}
+
+/* ==========================
+   NOTIFICATION GRID
+========================== */
+
+.notification-grid{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.notification{
+
+    background:white;
+
+    padding:20px;
+
+    border-left:5px solid royalblue;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+
+}
+
+.notification h3{
+
+    color:#1e3c72;
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+.loading{
+
+    text-align:center;
+
+    color:royalblue;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+}
+
+/* ==========================
+   ERROR
+========================== */
+
+.error-box{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#ffe6e6;
+
+    border-left:5px solid red;
+
+    color:#b30000;
+
+    border-radius:8px;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button{
+
+    padding:12px 25px;
+
+    background:#1e3c72;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    display:none;
+
+    margin-top:20px;
+
+}
+
+button:hover{
+
+    background:#16315d;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    background:#1e3c72;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+header h1{
+
+    font-size:30px;
+
+}
+
+.hero{
+
+    padding:25px;
+
+}
+
+}
