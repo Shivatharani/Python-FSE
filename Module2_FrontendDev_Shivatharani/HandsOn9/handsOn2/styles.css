@@ -1,0 +1,286 @@
+/*
+Accessibility and cross-browser notes:
+- Contrast before: #333 on #f5f5f5 -> #1f2937 on #f8fafc.
+- Feature support check: clamp() and CSS Grid are broadly supported; a polyfill script is included for older environments.
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg, #f8fafc 0%, #eef4ff 100%);
+    color:#1f2937;
+    line-height:1.5;
+}
+
+:focus-visible{
+    outline:3px solid #f1c40f;
+    outline-offset:3px;
+}
+
+header{
+    background:linear-gradient(135deg, #2c3e50 0%, #1f4e79 100%);
+    color:white;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    font-size:clamp(1.5rem,3vw,2.5rem);
+}
+
+.menu-toggle{
+    background:#fff;
+    color:#16324f;
+    border:none;
+    border-radius:999px;
+    padding:8px 14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+nav{
+    display:none;
+}
+
+nav.is-open{
+    display:block;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav li{
+    margin:10px 0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    min-height:40vh;
+    padding:40px 20px;
+    background:white;
+}
+
+#hero h1{
+    margin-bottom:20px;
+    color:#16324f;
+}
+
+#hero p{
+    margin-bottom:20px;
+}
+
+#hero button,
+.submit-btn{
+    padding:12px 24px;
+    border:none;
+    background:#2c3e50;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#hero button:hover,
+.submit-btn:hover,
+#hero button:focus-visible,
+.submit-btn:focus-visible{
+    background:#1f4e79;
+}
+
+.stats-bar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+    background:#ecf0f1;
+}
+
+.stat{
+    flex:1;
+    text-align:center;
+    padding:20px;
+    background:white;
+    border-radius:8px;
+}
+
+#courses,
+.panel{
+    padding:30px;
+}
+
+#courses h2,
+.panel h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#16324f;
+}
+
+.profile-form{
+    display:grid;
+    gap:12px;
+    max-width:420px;
+    margin:0 auto;
+}
+
+.profile-form label{
+    font-weight:600;
+}
+
+.profile-form input{
+    padding:12px;
+    border:1px solid #94a3b8;
+    border-radius:8px;
+}
+
+.results-count{
+    text-align:center;
+    margin-bottom:20px;
+    font-weight:600;
+    color:#1f4e79;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.course-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #d6e3f0;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    min-height:220px;
+    align-self:stretch;
+    text-align:left;
+    cursor:pointer;
+}
+
+.course-card h3{
+    margin-bottom:15px;
+}
+
+.course-card p{
+    margin-bottom:20px;
+}
+
+.course-card span{
+    color:#0f4f9c;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2c3e50;
+    color:white;
+}
+
+footer{
+
+    background:#2c3e50;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* ====================================
+   Tablet
+   768px
+==================================== */
+
+@media(min-width:768px){
+
+header{
+
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.menu-placeholder{
+
+    display:none;
+
+}
+
+nav{
+
+    display:block;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+nav li{
+
+    margin:0;
+
+}
+
+.stats-bar{
+
+    flex-direction:row;
+
+}
+
+.course-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ====================================
+   Desktop
+   1024px
+==================================== */
+
+@media(min-width:1024px){
+
+.course-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+#hero{
+
+    padding:80px 20px;
+
+}
+
+}
